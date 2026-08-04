@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل تعاويذ المبارزة السحرية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #1a0033 100%);
+            color: #f0e6ff;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(75, 0, 130, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(186, 85, 211, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+            animation: shimmer 8s ease-in-out infinite;
+        }
+        
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.3), transparent),
+                radial-gradient(2px 2px at 60% 70%, rgba(186, 85, 211, 0.4), transparent),
+                radial-gradient(1px 1px at 50% 50%, rgba(138, 43, 226, 0.3), transparent),
+                radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.2), transparent),
+                radial-gradient(2px 2px at 90% 60%, rgba(186, 85, 211, 0.3), transparent);
+            background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px, 180px 180px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 150px 50px;
+            pointer-events: none;
+            animation: sparkle 20s linear infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes sparkle {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-200px); }
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(75, 0, 130, 0.4), rgba(138, 43, 226, 0.4));
+            border-radius: 15px;
+            border: 2px solid rgba(186, 85, 211, 0.5);
+            box-shadow: 
+                0 10px 40px rgba(138, 43, 226, 0.6),
+                inset 0 0 60px rgba(186, 85, 211, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: headerPulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes headerPulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(138, 43, 226, 0.6), inset 0 0 60px rgba(186, 85, 211, 0.1); }
+            50% { box-shadow: 0 15px 50px rgba(138, 43, 226, 0.8), inset 0 0 80px rgba(186, 85, 211, 0.2); }
+        }
+        
+        header::before {
+            content: '✨';
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.15;
+            top: -20px;
+            left: 10%;
+            animation: float 6s ease-in-out infinite, spin 20s linear infinite;
+        }
+        
+        header::after {
+            content: '🪄';
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.15;
+            bottom: -20px;
+            right: 10%;
+            animation: float 6s ease-in-out infinite reverse, spin 25s linear infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.2em;
+            color: #e6b3ff;
+            text-shadow: 0 0 20px rgba(186, 85, 211, 0.8), 0 0 40px rgba(138, 43, 226, 0.5);
+            margin-bottom: 8px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(186, 85, 211, 0.8), 0 0 40px rgba(138, 43, 226, 0.5); }
+            to { text-shadow: 0 0 30px rgba(186, 85, 211, 1), 0 0 60px rgba(138, 43, 226, 0.8); }
+        }
+        
+        .subtitle {
+            font-size: 1em;
+            color: #d8bfd8;
+            font-weight: 300;
+        }
+        
+        .category {
+            margin-bottom: 25px;
+            background: rgba(30, 0, 60, 0.7);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 0 40px rgba(138, 43, 226, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .category::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, 
+                rgba(138, 43, 226, 0.5), 
+                rgba(186, 85, 211, 0.5),
+                rgba(75, 0, 130, 0.5),
+                rgba(138, 43, 226, 0.5));
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-size: 300% 300%;
+            animation: gradientShift 6s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .category:hover::before {
+            opacity: 1;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 12px 40px rgba(138, 43, 226, 0.6),
+                inset 0 0 60px rgba(138, 43, 226, 0.15);
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(186, 85, 211, 0.3);
+        }
+        
+        .category-icon {
+            font-size: 1.8em;
+            filter: drop-shadow(0 0 10px rgba(186, 85, 211, 0.8));
+        }
+        
+        .category-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.5em;
+            color: #e6b3ff;
+            text-shadow: 0 0 10px rgba(186, 85, 211, 0.6);
+        }
+        
+        .spells-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        
+        .spell-card {
+            background: linear-gradient(135deg, rgba(75, 0, 130, 0.5), rgba(50, 0, 90, 0.5));
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid rgba(186, 85, 211, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .spell-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(186, 85, 211, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .spell-card::after {
+            content: '✨';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 8px rgba(186, 85, 211, 0.8));
+        }
+        
+        .spell-card:hover::before {
+            left: 100%;
+        }
+        
+        .spell-card:hover::after {
+            opacity: 1;
+            transform: rotate(20deg) scale(1.2);
+        }
+        
+        .spell-card:hover {
+            transform: scale(1.05) translateY(-5px);
+            border-color: rgba(186, 85, 211, 0.8);
+            box-shadow: 
+                0 8px 25px rgba(138, 43, 226, 0.6),
+                inset 0 0 30px rgba(186, 85, 211, 0.2);
+            background: linear-gradient(135deg, rgba(75, 0, 130, 0.7), rgba(50, 0, 90, 0.7));
+        }
+        
+        .spell-card:active {
+            transform: scale(0.98) translateY(0);
+            box-shadow: 
+                0 4px 15px rgba(138, 43, 226, 0.8),
+                inset 0 0 40px rgba(186, 85, 211, 0.3);
+        }
+        
+        .copied-notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100px);
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.95), rgba(186, 85, 211, 0.95));
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 
+                0 5px 25px rgba(138, 43, 226, 0.8),
+                inset 0 0 20px rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            animation: magicPulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes magicPulse {
+            0%, 100% { 
+                box-shadow: 0 5px 25px rgba(138, 43, 226, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.2);
+            }
+            50% { 
+                box-shadow: 0 8px 35px rgba(186, 85, 211, 1), inset 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+        }
+        
+        .copied-notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+        
+        .spell-name {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #ba55d3;
+            margin-bottom: 6px;
+            text-shadow: 0 0 5px rgba(186, 85, 211, 0.5);
+        }
+        
+        .spell-cost {
+            display: inline-block;
+            background: rgba(138, 43, 226, 0.4);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: #e6b3ff;
+            margin-bottom: 8px;
+            border: 1px solid rgba(186, 85, 211, 0.5);
+        }
+        
+        .spell-effects {
+            list-style: none;
+            margin-top: 8px;
+        }
+        
+        .spell-effects li {
+            padding: 4px 0;
+            color: #d8bfd8;
+            font-size: 0.85em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .spell-effects li::before {
+            content: '⚡';
+            color: #ba55d3;
+            font-size: 1em;
+            animation: sparkleEffect 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkleEffect {
+            0%, 100% { 
+                filter: drop-shadow(0 0 2px rgba(186, 85, 211, 0.8));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 8px rgba(186, 85, 211, 1));
+                transform: scale(1.2);
+            }
+        }
+        
+        .notes {
+            background: rgba(75, 0, 130, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+            border: 1px solid rgba(138, 43, 226, 0.4);
+            text-align: center;
+        }
+        
+        .notes h3 {
+            color: #e6b3ff;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .notes ul {
+            list-style: none;
+            color: #d8bfd8;
+        }
+        
+        .notes li {
+            padding: 5px 0;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+            }
+            
+            .subtitle {
+                font-size: 0.9em;
+            }
+            
+            .spells-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 10px;
+            }
+            
+            .category-title {
+                font-size: 1.2em;
+            }
+            
+            .category-icon {
+                font-size: 1.5em;
+            }
+            
+            .spell-card {
+                padding: 10px;
+            }
+            
+            .spell-name {
+                font-size: 0.95em;
+            }
+            
+            .spell-effects li {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="copyNotification" class="copied-notification">
+        ✨ تم نسخ التعويذة! ✨
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>🪄 دليل تعاويذ المبارزة السحرية 🪄</h1>
+            <p class="subtitle">اكتشف قوة التعاويذ القديمة وأسرار فنون السحر</p>
+        </header>
+
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">⚔️</span>
+                <h2 class="category-title">تعاويذ الهجوم</h2>
+            </div>
+            <div class="spells-grid">
+                <div class="spell-card" onclick="copySpellName('Expelliarmus')">
+                    <div class="spell-name">Expelliarmus</div>
+                    <span class="spell-cost">تكلفة: 10 MP</span>
+                    <ul class="spell-effects">
+                        <li>يلغي التأثيرات الدفاعية</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Depulso')">
+                    <div class="spell-name">Depulso</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -10 HP للخصم</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Confringo')">
+                    <div class="spell-name">Confringo</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -15 HP للخصم</li>
+                        <li>حرق 5 HP لمدة 3 أدوار</li>
+                        <li>يقلل -10 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Stupefy')">
+                    <div class="spell-name">Stupefy</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>الخصم يفقد الدور القادم</li>
+                        <li>يمنح +10 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Bombarda')">
+                    <div class="spell-name">Bombarda</div>
+                    <span class="spell-cost">تكلفة: 30 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -20 HP للخصم</li>
+                        <li>يقلل -15 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Immobulus')">
+                    <div class="spell-name">Immobulus</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يشل الخصم لمدة دورين</li>
+                        <li>يمنح +10 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Flipendo')">
+                    <div class="spell-name">Flipendo</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -10 HP للخصم</li>
+                        <li>يمنع الخصم من الهجوم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('PetrificusTotalus')">
+                    <div class="spell-name">Petrificus Totalus</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يشل الخصم لمدة دورين</li>
+                        <li>يقلل -10 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Expulso')">
+                    <div class="spell-name">Expulso</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -15 HP للخصم</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Reducto')">
+                    <div class="spell-name">Reducto</div>
+                    <span class="spell-cost">تكلفة: 30 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -20 HP للخصم</li>
+                        <li>يقلل -10 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('LocomotorMortis')">
+                    <div class="spell-name">Locomotor Mortis</div>
+                    <span class="spell-cost">تكلفة: 10 MP</span>
+                    <ul class="spell-effects">
+                        <li>يشل الخصم لدور واحد</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">🛡️</span>
+                <h2 class="category-title">تعاويذ الدفاع</h2>
+            </div>
+            <div class="spells-grid">
+                <div class="spell-card" onclick="copySpellName('Impedimenta')">
+                    <div class="spell-name">Impedimenta</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يقلل هجوم الخصم 50%</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Protego')">
+                    <div class="spell-name">Protego</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يحجب 15 HP من الضرر</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('RevulsionJinx')">
+                    <div class="spell-name">Revulsion Jinx</div>
+                    <span class="spell-cost">تكلفة: 10 MP</span>
+                    <ul class="spell-effects">
+                        <li>يزيل تأثير سلبي واحد</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('CaveInimicum')">
+                    <div class="spell-name">Cave Inimicum</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يحجب 20 HP من الضرر</li>
+                        <li>يمنح +10 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('ImperturbableCharm')">
+                    <div class="spell-name">Imperturbable Charm</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يحجب التأثيرات لـ 3 أدوار</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('ProtegoHorribilis')">
+                    <div class="spell-name">Protego Horribilis</div>
+                    <span class="spell-cost">تكلفة: 30 MP</span>
+                    <ul class="spell-effects">
+                        <li>يحجب 25 HP من الضرر</li>
+                        <li>يقلل -10 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('ProtegoTotalum')">
+                    <div class="spell-name">Protego Totalum</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يحجب 20 HP من الضرر</li>
+                        <li>يحجب التأثيرات السلبية</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('SalvioHexia')">
+                    <div class="spell-name">Salvio Hexia</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يحجب 15 HP من الضرر</li>
+                        <li>يقلل التأثيرات 50%</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">💚</span>
+                <h2 class="category-title">تعاويذ العلاج</h2>
+            </div>
+            <div class="spells-grid">
+                <div class="spell-card" onclick="copySpellName('Episkey')">
+                    <div class="spell-name">Episkey</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يعالج 10 HP</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Ferula')">
+                    <div class="spell-name">Ferula</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يعالج 15 HP</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('VulneraSanentur')">
+                    <div class="spell-name">Vulnera Sanentur</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يعالج 20 HP</li>
+                        <li>يزيل تأثير سلبي واحد</li>
+                        <li>يمنح +10 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Reparifarge')">
+                    <div class="spell-name">Reparifarge</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يعالج 10 HP</li>
+                        <li>يزيل تأثيرين سلبيين</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">🌑</span>
+                <h2 class="category-title">فنون الظلام</h2>
+            </div>
+            <div class="spells-grid">
+                <div class="spell-card" onclick="copySpellName('BatBogeyHex')">
+                    <div class="spell-name">Bat-Bogey Hex</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -10 HP للخصم</li>
+                        <li>نزيف 5 HP لمدة دورين</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('CurseOfTheBogies')">
+                    <div class="spell-name">Curse of the Bogies</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -15 HP للخصم</li>
+                        <li>يمنع الدفاع لمدة دورين</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('JellyBrainJinx')">
+                    <div class="spell-name">Jelly-Brain Jinx</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يمنع الهجوم لمدة دورين</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('JellyFingersJinx')">
+                    <div class="spell-name">Jelly-Fingers Jinx</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يقلل الدقة 50% لدورين</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('PimpleJinx')">
+                    <div class="spell-name">Pimple Jinx</div>
+                    <span class="spell-cost">تكلفة: 10 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يزيد ضرر الخصم 25%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">🔄</span>
+                <h2 class="category-title">تعاويذ التحويل</h2>
+            </div>
+            <div class="spells-grid">
+                <div class="spell-card" onclick="copySpellName('ArrowShootingSpell')">
+                    <div class="spell-name">Arrow-Shooting Spell</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -10 HP للخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('EbubiloJinx')">
+                    <div class="spell-name">Ebublio Jinx</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يعمي الخصم لدورين</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('FireRope')">
+                    <div class="spell-name">Fire Rope</div>
+                    <span class="spell-cost">تكلفة: 25 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -15 HP للخصم</li>
+                        <li>حرق 5 HP لمدة دورين</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('WhipSpell')">
+                    <div class="spell-name">Whip Spell</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -10 HP للخصم</li>
+                        <li>يمنع الدفاع الدور القادم</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Serpensortia')">
+                    <div class="spell-name">Serpensortia</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يستدعي ثعبان</li>
+                        <li>5 HP ضرر لـ 3 أدوار</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Melofors')">
+                    <div class="spell-name">Melofors</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يشل الخصم لدور واحد</li>
+                        <li>يقلل -5 MP من الخصم</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Obscuro')">
+                    <div class="spell-name">Obscuro</div>
+                    <span class="spell-cost">تكلفة: 15 MP</span>
+                    <ul class="spell-effects">
+                        <li>يسبب -5 HP للخصم</li>
+                        <li>يمنع العلاج لدورين</li>
+                    </ul>
+                </div>
+                <div class="spell-card" onclick="copySpellName('Incarcerous')">
+                    <div class="spell-name">Incarcerous</div>
+                    <span class="spell-cost">تكلفة: 20 MP</span>
+                    <ul class="spell-effects">
+                        <li>يشل الخصم لدور واحد</li>
+                        <li>يمنح +5 MP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h3>✨ ملاحظات مهمة ✨</h3>
+            <ul>
+                <li>MP = نقاط السحر (Mana Points)</li>
+                <li>HP = نقاط الحياة (Health Points)</li>
+                <li>الأرقام السالبة تعني ضرر على الخصم</li>
+                <li>الأرقام الموجبة تعني مكسب للاعب</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function copySpellName(spellName) {
+            navigator.clipboard.writeText(spellName).then(() => {
+                const notification = document.getElementById('copyNotification');
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 2000);
+            }).catch(err => {
+                console.error('فشل النسخ:', err);
+                alert('تم نسخ: ' + spellName);
+            });
+        }
+    </script>
+</body>
+</html>

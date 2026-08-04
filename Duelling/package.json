@@ -1,0 +1,11 @@
+{
+  "name": "duelling-bot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node --env-file=.env Duelling.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.4"
+  }
+}
